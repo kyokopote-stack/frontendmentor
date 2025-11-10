@@ -234,6 +234,7 @@ main
   color: #bdc1ff;
   font-size: 0.9375rem;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {

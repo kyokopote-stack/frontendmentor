@@ -303,6 +303,7 @@ main
 .card_previous {
   color: $color-navy-200;
   @include text-preset-6;
+  white-space: nowrap;
 }
 
 @include tab {

@@ -8,21 +8,20 @@ Through these challenges, I'm practicing HTML, CSS (SCSS), and JavaScript step b
 
 ## 📂 Projects
 
-| Challenge | Live Demo | Code |
-| --------- | --------- | ---- |
-
-| **tip-calculator-app** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **time-tracking-dashboard** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **newsletter-sign-up-with-success-message** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **article-preview-component** | [View Site](https://ohe.github.io/frontendmentor/projects/time-tracking-dashboard/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/time-tracking-dashboard) |
-| **meet-landing-page** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **testimonials-grid-section** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **four-card-feature-section** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **product-preview-card-component** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **recipe-page** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
-| **social-links-profile** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/social-links-profile) |
-| **social-links-profile** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/social-links-profile) |
-| **QR Code Component** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component) |
+| Challenge                                   | Live Demo                                                                           | Code                                                                                       |
+| ------------------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **tip-calculator-app**                      | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **time-tracking-dashboard**                 | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **newsletter-sign-up-with-success-message** | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **article-preview-component**               | [View Site](https://ohe.github.io/frontendmentor/projects/time-tracking-dashboard/) | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/time-tracking-dashboard) |
+| **meet-landing-page**                       | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **testimonials-grid-section**               | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **four-card-feature-section**               | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **product-preview-card-component**          | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **recipe-page**                             | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
+| **social-links-profile**                    | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/social-links-profile)    |
+| **social-links-profile**                    | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/social-links-profile)    |
+| **QR Code Component**                       | [View Site](https://ohe.github.io/frontendmentor/projects/qr-code-component/)       | [Source](https://github.com/ohe/frontendmentor/tree/main/projects/qr-code-component)       |
 
 ---
 

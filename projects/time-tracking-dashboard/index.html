@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- js -->
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <div class="card_head">
+        <figure class="card_head_profile">
+          <img src="images/image-jeremy.png" alt="">
+          <figcaption>
+            <h1 class="author">
+              <span class="text">Report for</span>
+              <span class="name">Jeremy Robson</span>
+            </h1>
+          </figcaption>
+        </figure>
+        <ul class="selector" role="tablist">
+          <li><button data-time="daily">Daily</button></li>
+          <li><button data-time="weekly">Weekly</button></li>
+          <li><button data-time="monthly">Monthly</button></li>
+        </ul>
+
+      </div>
+
+      <div class="card_body">
+        <ul class="cards">
+
+          <li class="cards_item work">
+            <div class="cards_item_main">
+              <h2 class="cards_item_ttl js-title"></h2>
+              <div class="cards_item_content">
+                <div class="card_current js-current fade show"></div>
+                <div class="card_previous js-previous fade show"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards_item play">
+            <div class="cards_item_main">
+              <h2 class="cards_item_ttl js-title"></h2>
+              <div class="cards_item_content">
+                <div class="card_current js-current fade show"></div>
+                <div class="card_previous js-previous fade show"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards_item study">
+            <div class="cards_item_main">
+              <h2 class="cards_item_ttl js-title"></h2>
+              <div class="cards_item_content">
+                <div class="card_current js-current fade show"></div>
+                <div class="card_previous js-previous fade show"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards_item exercise">
+            <div class="cards_item_main">
+              <h2 class="cards_item_ttl js-title"></h2>
+              <div class="cards_item_content">
+                <div class="card_current js-current fade show"></div>
+                <div class="card_previous js-previous fade show"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards_item social">
+            <div class="cards_item_main">
+              <h2 class="cards_item_ttl js-title"></h2>
+              <div class="cards_item_content">
+                <div class="card_current js-current fade show"></div>
+                <div class="card_previous js-previous fade show"></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards_item self-care">
+            <div class="cards_item_main">
+              <h2 class="cards_item_ttl js-title"></h2>
+              <div class="cards_item_content">
+                <div class="card_current js-current fade show"></div>
+                <div class="card_previous js-previous fade show"></div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Kyokopote</a>.
+    </div>
+  </footer>
+
+</body>
+
+</html>

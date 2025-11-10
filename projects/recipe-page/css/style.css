@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+:root {
+  --color-white: #fff;
+  --color-stone100: #f3e6d8;
+  --color-stone150: #e4ded8;
+  --color-stone600: #5f574e;
+  --color-stone900: #302d2c;
+  --color-brown: #854632;
+  --color-rose800: #7b284f;
+  --color-rose50: #fff5fa;
+  --font-size-xlarge: clamp(2.25rem, 2.162rem + 0.38vw, 2.5rem);
+  --font-size-large: clamp(1.25rem, 1.215rem + 0.32vw, 1.5rem);
+  --font-size-regular: 1rem;
+  --font-size-small: clamp(0.75rem, 0.733rem + 0.16vw, 0.875rem);
+  --padding: 2rem;
+  --border: 1px solid #e0e0e0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size-regular);
+  color: var(--color-stone900);
+  background-color: var(--color-stone100);
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+a {
+  color: var(--color-stone900);
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+
+/*==================================================
+main
+===================================*/
+.recipe__body {
+  width: 100%;
+  background-color: var(--color-white);
+}
+.wrapper {
+  width: 83%;
+  margin-inline: auto;
+}
+.recipe__title {
+  font-family: "Young Serif", serif;
+  font-size: var(--font-size-xlarge);
+  line-height: 1;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.recipe__description {
+  margin-bottom: 2rem;
+}
+
+/* recipe__time */
+
+.recipe__time {
+  background-color: var(--color-rose50);
+  padding: 1.125rem 2rem 1.5rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.recipe__time-title {
+  font-size: 1.25rem;
+  color: var(--color-rose800);
+  border-radius: 15px;
+  margin-bottom: 0.75rem;
+}
+.recipe__time-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+.recipe__time-item {
+  padding-left: 2.5rem;
+  position: relative;
+}
+.recipe__time-item:before {
+  content: "・";
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 1%;
+}
+.recipe__time-item:first-child::before {
+  top: 20%;
+}
+.recipe__heading {
+  font-family: "Young Serif", serif;
+  font-size: 1.75rem;
+  color: var(--color-brown);
+  margin-bottom: 1.125rem;
+}
+
+/* recipe__ingredients */
+
+.recipe__ingredients {
+  padding-bottom: var(--padding);
+  border-bottom: var(--border);
+}
+.recipe__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+  padding-right: 2rem;
+}
+.recipe__item {
+  padding-left: 2.5rem;
+  position: relative;
+}
+.recipe__item:before {
+  content: "・";
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.recipe__item:last-child::before {
+  top: 20%;
+}
+
+/* recipe__instructions */
+
+.recipe__instructions {
+  padding-top: 1.5rem;
+  padding-bottom: var(--padding);
+  border-bottom: var(--border);
+}
+.recipe__steps {
+  counter-reset: step;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 0.5em;
+}
+.recipe__step-item {
+  display: grid;
+  grid-template-columns: 2em 1fr;
+  counter-increment: step;
+}
+.recipe__step-item p span {
+  font-weight: 700;
+}
+.recipe__step-item:before {
+  content: counter(step) ".";
+  color: var(--color-brown);
+  font-weight: 700;
+}
+/* recipe__nutrition */
+.recipe__nutrition {
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+}
+.recipe__note {
+  margin-bottom: 0.75rem;
+  padding-right: 1rem;
+}
+.recipe__nutrition-list-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: var(--border);
+}
+.recipe__nutrition-head {
+  padding-left: 2rem;
+}
+.recipe__nutrition-body {
+  color: var(--color-brown);
+  font-weight: 700;
+  padding-left: 0.5rem;
+}
+.recipe__nutrition-list-item:last-child {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 768px) {
+  .recipe__body {
+    width: 57.2%;
+    max-width: 46rem;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2.625rem;
+    margin-inline: auto;
+    margin-top: 7.5rem;
+  }
+  .recipe__hero img {
+    border-radius: 15px;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .recipe__title {
+    margin-top: 2.625rem;
+    margin-bottom: 1.5625rem;
+  }
+  .recipe__description {
+    margin-bottom: 2rem;
+  }
+
+  /* recipe__time */
+
+  .recipe__time {
+    padding: 22px 2rem 1.5rem 1.5rem;
+    margin-bottom: 1.875rem;
+  }
+  .recipe__time-title {
+    margin-bottom: 0.625rem;
+  }
+  .recipe__time-list {
+    gap: 9px;
+  }
+  .recipe__time-item {
+    padding-left: 2.625rem;
+  }
+  .recipe__time-item:first-child::before {
+    top: 20%;
+  }
+  .recipe__heading {
+    letter-spacing: 0em;
+    margin-bottom: 1rem;
+  }
+
+  /* recipe__ingredients */
+
+  .recipe__list {
+    gap: 0.5rem;
+    padding-right: 2rem;
+  }
+  .recipe__item {
+    padding-left: 2.25rem;
+  }
+
+  /* recipe__instructions */
+
+  .recipe__instructions {
+    padding-top: 1.5rem;
+    padding-bottom: var(--padding);
+  }
+  .recipe__steps {
+    gap: 0.5rem;
+    padding-left: 0.3125rem;
+  }
+  .recipe__step-item {
+    grid-template-columns: 2em 1fr;
+  }
+
+  /* recipe__nutrition */
+  .recipe__nutrition {
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+  }
+  .recipe__note {
+    margin-bottom: 1rem;
+  }
+  .recipe__nutrition-list-item {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  .recipe__nutrition-head {
+    padding-left: 2rem;
+  }
+}
+/*==================================================
+footer
+===================================*/
+footer {
+  padding-bottom: var(--padding);
+  background-color: var(--color-white);
+}
+.attribution {
+  font-size: var(--font-size-small);
+  text-align: center;
+  color: var(--color-stone900);
+}
+@media screen and (min-width: 768px) {
+  footer {
+    padding-top: var(--padding);
+    background-color: var(--color-stone100);
+  }
+}

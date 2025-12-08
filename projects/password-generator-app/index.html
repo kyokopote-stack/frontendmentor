@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Frontend Mentor | Password generator app</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Noto+Sans+JP:wght@100..900&display=swap"
+		rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- js -->
+	<script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+	<main>
+		<div class="container">
+			<h1>Password Generator</h1>
+			<div class="generator">
+				<div class="display-area">
+					<p class="password">P4$5W0rD!</p>
+					<div class="copy-btn-box">
+						<p class="copied-text">Copied</p>
+						<button type="button" class="copy-btn"><img src="assets/images/icon-copy.svg" alt=""></button>
+					</div>
+				</div>
+				<div class="input-area">
+
+					<div class="length-area">
+						<div class="length-area__label">
+							<p class="length-area__label-text">Character Length</p>
+							<p class="length-area__label-number">0</p>
+						</div>
+						<input type="range" id="lengthRange" min="0" max="20" value="0">
+					</div>
+
+					<ul class="option-area">
+						<li>
+							<input type="checkbox" id="includeUpper" name="includeUpper">
+							<label for="includeUpper">Include Uppercase Letters</label>
+						</li>
+						<li>
+							<input type="checkbox" id="includeLower" name="includeLower">
+							<label for="includeLower">Include Lowercase Letters</label>
+						</li>
+						<li>
+							<input type="checkbox" id="includeNumbers" name="includeNumbers">
+							<label for="includeNumbers">Include Numbers</label>
+						</li>
+						<li>
+							<input type="checkbox" id="includeSymbols" name="includeSymbols">
+							<label for="includeSymbols">Include Symbols</label>
+						</li>
+					</ul>
+					<div class="strength-area">
+						<p class="strength-area__ttl">Strength</p>
+						<div class="strength-area__value-box">
+							<p class="strength-area__value">Medium</p>
+							<div class="strength-area__bar">
+								<span class="bar"></span>
+								<span class="bar"></span>
+								<span class="bar"></span>
+								<span class="bar"></span>
+							</div>
+						</div>
+					</div>
+					<button class="generate-btn" type="button">Generate</button>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+			Coded by <a href="#">Kyokopote</a>.
+		</div>
+	</footer>
+
+</body>
+
+</html>

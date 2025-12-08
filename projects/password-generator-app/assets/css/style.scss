@@ -1,0 +1,451 @@
+@charset "UTF-8";
+
+
+$tab: 768px;
+$pc: 1024px;
+$color-white: #fff;
+$color-black: #000;
+
+$color-gray-200: #E6E5EA;
+$color-gray-600: #817D92;
+$color-gray-700: #54535B;
+$color-gray-800: #24232C;
+$color-gray-850: #18171F;
+$color-gray-900: #14131B;
+$color-gray-950: #08070B;
+
+$color-green: #A4FFAF;
+$color-yellow: #F8CD65;
+$color-red: #F64A4A;
+$color-orange: #FB7C58;
+
+$gradient: linear-gradient(#14131B, #08070B);
+
+@mixin tab {
+    @media screen and (min-width: $tab) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media screen and (min-width: $pc) {
+        @content;
+    }
+}
+
+body {
+    color: $color-white;
+    background-color: $color-gray-900;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+}
+
+@function rem($px, $base: 16) {
+    @return ($px / $base) * 1rem;
+}
+
+@mixin text-preset-1 {
+    font-size: rem(32);
+    line-height: 1.3125;
+    letter-spacing: 0;
+}
+
+@mixin text-preset-2 {
+    font-size: rem(24);
+    line-height: 1.3125;
+    letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+    font-size: rem(18);
+    line-height: 1.33;
+    letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+    font-size: rem(16);
+    line-height: 1.25;
+    letter-spacing: 0;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+a {
+    color: $color-white;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :where(*) {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/*==================================================
+main
+===================================*/
+main {
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    @include flex-column;
+    width: 100%;
+    padding-inline: 1rem;
+    margin: auto;
+
+    @include tab {
+        max-width: calc(rem(540) + 2rem);
+        row-gap: 2rem
+    }
+}
+
+h1 {
+    @include text-preset-4;
+    color: $color-gray-600;
+    text-align: center;
+
+    @include tab {
+        @include text-preset-2;
+    }
+}
+
+.generator {
+    @include flex-column;
+
+    @include tab {
+        row-gap: 2rem;
+    }
+}
+
+.display-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $color-gray-800;
+
+    @include tab {
+        padding: 1rem 2rem;
+    }
+}
+
+.password {
+    @include text-preset-2;
+    color: $color-gray-700;
+
+    @include tab {
+        @include text-preset-1;
+    }
+}
+
+.password--active {
+    color: $color-white;
+    transition: color .2s;
+}
+
+.password--error {
+    font-size: 1.2em;
+}
+
+.copy-btn-box {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1rem;
+}
+
+.copied-text {
+    @include text-preset-3;
+    color: $color-green;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.copied-text.show {
+    opacity: 1;
+}
+
+.copy-btn {
+    width: auto;
+    height: rem(20);
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: $color-gray-800;
+
+    @include tab {
+        padding: 1.5rem 2rem;
+    }
+}
+
+.length-area {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-block-end: 3rem;
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 1em;
+
+        @include tab {
+            margin-right: 0;
+
+        }
+    }
+
+    &__label-text {
+        @include text-preset-4;
+        color: $color-gray-200;
+
+        @include tab {
+            @include text-preset-3;
+        }
+    }
+
+    &__label-number {
+        @include text-preset-2;
+        color: $color-green;
+
+        @include tab {
+            @include text-preset-1;
+        }
+    }
+}
+
+/* 親のスライダー本体 */
+input[type="range"] {
+    width: 100%;
+    height: 0.5rem;
+    appearance: none;
+    background: transparent;
+}
+
+/* つまみ（サム） */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: rem(28);
+    height: rem(28);
+    background: $color-gray-200;
+    border-radius: 50%;
+    margin-top: -4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:active,
+    &:hover {
+        background-color: $color-gray-850;
+        border: 2px solid $color-green ;
+    }
+
+    &:focus {
+        outline: 3px solid $color-green;
+    }
+}
+
+
+/* Firefox用 */
+input[type="range"]::-moz-range-track {
+    height: .5rem;
+    background: transparent;
+}
+
+input[type="range"] {
+    height: 0.5rem;
+}
+
+
+input[type="range"]::-moz-range-thumb {
+    width: rem(28);
+    height: rem(28);
+    background: $color-gray-200;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.option-area {
+    margin-block-end: 2rem;
+    @include flex-column;
+    list-style: none;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]+label {
+    @include text-preset-3;
+    position: relative;
+    padding-left: 2rem;
+    cursor: pointer;
+
+    @include tab {
+        padding-left: 2.5rem;
+
+    }
+}
+
+input[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(20);
+    height: rem(20);
+    border: 2px solid $color-gray-200;
+}
+
+input[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: rem(20);
+    height: rem(20);
+    color: $color-gray-850;
+    background-color: $color-green;
+    background-image: url(../images/icon-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.strength-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-gray-850;
+    padding: 1rem;
+    margin-block-end: 1rem;
+
+    @include tab() {
+        padding: 1.5rem 2rem;
+        margin-block-end: 2rem;
+
+    }
+
+
+    &__ttl {
+        @include text-preset-3;
+        color: $color-gray-600;
+        text-transform: uppercase;
+    }
+
+    &__value-box {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    &__value {
+        @include text-preset-2;
+        color: $color-gray-200;
+        text-transform: uppercase;
+    }
+
+    &__bar {
+        display: flex;
+        column-gap: 0.5rem;
+    }
+}
+
+.bar {
+    width: rem(10);
+    height: rem(28);
+    border: 2px solid $color-gray-200;
+}
+
+.bar.active {
+    background-color: $color-yellow;
+    border: none
+}
+
+.generate-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    width: 100%;
+    padding-block: 1rem;
+    background-color: $color-green;
+    border: 2px solid transparent;
+    @include text-preset-3;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:after {
+        content: "";
+        display: block;
+        background-image: url(../images/icon-arrow-right.svg);
+        height: rem(12);
+        aspect-ratio: 11.11/12;
+    }
+
+    &:active,
+    &:hover {
+        background-color: $color-gray-850;
+        border: 2px solid $color-green ;
+        color: $color-green;
+
+        &:after {
+            content: "";
+            background-image: url(../images/icon-arrow-right-green.svg);
+        }
+    }
+}
+
+/*==================================================
+footer
+===================================*/
+footer {
+    padding-bottom: 1.25rem;
+}
+
+.attribution {
+    text-align: center;
+    font-size: 1rem;
+    color: $color-gray-600;
+
+    a {
+        color: $color-gray-200;
+    }
+}

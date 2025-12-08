@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>Frontend Mentor | Frontend quiz app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- js -->
+  <script src="assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="is-start">
+    <div class="header-inner">
+      <div class="genre-container">
+        <img src="" alt="" class="genre-icon">
+        <h3 class="genre-ttl"></h3>
+      </div>
+      <button id="theme-toggle" class="toggle">
+        <img src="assets/images/icon-sun-dark.svg" class="icon-sun" alt="">
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+        <img src="assets/images/icon-moon-dark.svg" class="icon-moon" alt="">
+      </button>
+    </div>
+  </header>
+  <main>
+    <!-- 1:start -->
+    <section id="screen-start" class="screen active">
+      <div class="card">
+        <div class="welcome-container">
+          <h1 class="welcome"><span class="welcome-upper-line">Welcome to the</span> Frontend Quiz!</h1>
+          <p class="welcome-sub">Pick a subject to get started.</p>
+        </div>
+        <ul id="subject-list" class="subject-list">
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2:quiz -->
+    <section id="screen-quiz" class="screen">
+      <div class="card">
+        <div class="quiz">
+          <div class="quiz-header">
+            <p id="quiz-progress"></p>
+            <h2 id="question-text"></h2>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="choices-container">
+          <ul id="choices" class="choices"></ul>
+          <button id="submit-answer">Submit answer</button>
+          <p id="error-message" class="error"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3:result -->
+    <section id="screen-result" class="screen">
+      <div class="card">
+        <div class="result-header">
+          <h2>Quiz completed</h2>
+          <p class="score-label">You scored…</p>
+        </div>
+        <div class="result-main">
+          <div class="result-main-card">
+            <div class="genre-container">
+              <img src="" alt="" class="genre-icon">
+              <h3 class="genre-ttl"></h3>
+            </div>
+            <p id="score-result"></p>
+            <p class="score-under-text">out of 10</p>
+          </div>
+          <button id="restart">Play again</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Kyokopote</a>.
+    </div>
+  </footer>
+
+</body>
+
+</html>
